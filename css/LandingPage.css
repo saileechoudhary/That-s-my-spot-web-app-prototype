@@ -1,0 +1,15 @@
+<style>
+body {
+    background-image: url("./new  2_files/car.jpg");
+}
+.but {
+
+    position : relative;
+    width = 34px;
+	height =34px;
+	top : 0%;
+    left : 0%;
+    float:right;
+
+}
+</style>

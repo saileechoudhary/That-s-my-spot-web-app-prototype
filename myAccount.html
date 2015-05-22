@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>That's My Spot!!</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+				
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+		<script src="js/scripts.js"></script>
+		
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/redmond/jquery-ui.css">
+		
+		<script>			
+			$(function() {
+				$( "#accordion" ).accordion({
+					heightStyle: "content"
+				});				
+			});
+$(function() {
+		var dialog;
+
+		function continueToReserve() {
+					var valid = true;		
+					dialog.dialog( "close" );	
+				
+					return true;
+				}
+				
+		dialog = $( "#dialog-confirm" ).dialog({
+				autoOpen: false,
+				height: 300,
+				width: 350,
+				modal: true,
+				buttons: {
+					"Delete Bookings": continueToReserve,
+					Cancel: function() {
+						dialog.dialog( "close" );
+					}
+				},
+				close: function() {
+				form[ 0 ].reset();	
+			
+				}
+			});
+			form = dialog.find( "form" ).on( "submit", function( event ) {
+			event.preventDefault();
+			continueToReserve();
+			});
+			$( "#cbutton" ).button().on( "click", function() {
+				dialog.dialog( "open" );
+				return false;
+			});
+ 
+ });
+		</script>
+	
+	
+	</head>
+	<body>
+	
+<div id="dialog-confirm" title="Empty the recycle bin?">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Your bookings will be deleted. Are you sure?</p>
+</div>	
+
+<!-- begin template -->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header"><a class="navbar-brand" href="./index.html">That's My Spot!</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li class="active"><a href="./about_us.html">About Us</a></li>
+        <li><a href="./myAccount.html">Manage Bookings</a></li>
+        <li>&nbsp;</li>
+      </ul>
+      <form class="navbar-form">
+        <div class="form-group" style="width=60%;">
+          <div class="input-group" style="width: 53%; float:left">            
+            <input type="text" class="form-control" placeholder="Search Parking at a location enter zipcode or landmark or street">
+            <span class="input-group-addon"><a href="./index.html"><img src="s.png"></img></a></span>
+          </div>
+		  <div style="width: 12%; float:right">
+				<img src="johnny_bravo1.jpg" width="26px" height="26px"></img>
+				<a href="#">Hi! Johnny Bravo</a>
+		  </div>
+        </div>
+      </form>
+
+    </div>
+</div>
+
+<div id="accordion">
+		 <h3>My Details</h3>
+		 <div>
+			<p>
+				<img src="johnny_bravo1.jpg" alt="Smiley face" width="100" height="100">
+				<table border = "0" style="width:30%">
+					<tr>
+						<td>Name: </td>
+						<td>Johnny Bravo </td> 
+					</tr>
+					<tr>
+						<td>Age: </td>
+						<td>21 Years</td> 
+					</tr>
+					<tr>
+						<td>Gender: </td>
+						<td>Male</td> 
+					</tr>
+					<tr>
+						<td>Address: </td>
+						<td>San Jose, CA</td> 
+					</tr>
+				</table>
+			</p>
+		</div>
+		<h3>My Past Bookings</h3>
+		<div>
+			<p>
+		<table border = "1" style="width:70%">
+          <tr>
+            <th>DATE</th>
+            <th>TIME</th> 
+            <th>ADDRESS</th>
+            <th>AMOUNT PAID</th>
+			<th>PARKING SPOT</th>
+          </tr>
+          <tr>
+            <td>09/01/2014</td>
+            <td>2pm - 4pm</td> 
+            <td>10 street san jose</td>
+            <td>30.0$</td>
+			 <td>1A</td>
+          </tr>
+           <tr>
+           <td>10/05/2014</td>
+           <td>4pm - 6pm</td> 
+           <td>4th street san jose</td>
+            <td>30.0$</td>
+			<td>5F</td>
+          </tr>
+          <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+              <td>30.0$</td>
+			  <td>7A</td>
+          </tr>
+            <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+           <td>30.0$</td>
+		   <td>4C</td>
+          </tr>
+            <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+           <td>30.0$</td>
+		   <td>2F</td>
+          </tr>
+            <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+           <td>30.0$</td>
+		   <td>4L</td>
+          </tr>
+            <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+            <td>30.0$</td>
+			<td>1A</td>
+          </tr>
+        </table>
+			</p>
+		</div>
+		<h3>Cancel bookings</h3>
+			<div>
+			 <form>   
+			<table border = "1" style="width:70%">
+          <tr>
+            <th>DATE</th>
+            <th>TIME</th> 
+            <th>ADDRESS</th>
+			<th>PARKING SPOT</th>
+            <th> Cancel</th>
+          </tr>
+          <tr>
+            <td>09/01/2014</td>
+            <td>2pm - 4pm</td> 
+            <td>10 street san jose</td>
+			<td>1A</td>
+			<td align="center"><input type="checkbox" name="address3" value="Adrress3"/></td>
+          </tr>
+           <tr>
+           <td>10/05/2014</td>
+           <td>4pm - 6pm</td> 
+           <td>4th street san jose</td>
+		   <td>4L</td>
+			<td align="center"><input type="checkbox" name="address3" value="Adrress3"/></td>
+          </tr>
+          <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>17th street san jose</td>
+		   <td>5F</td>
+		   <td align="center"><input type="checkbox" name="address3" value="Adrress3"/></td>
+          </tr>
+            <tr>
+           <td>12/10/2014</td>
+           <td>6pm - 10pm</td> 
+           <td>Second and San Carlos Street Garage</td>
+		   <td>3F</td>
+		   <td align="center"><input type="checkbox" name="address3" value="Adrress3"/></td>
+          </tr>
+            
+        </table>					  
+			<br/>
+			<button id="cbutton" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel Bookings</span></button>
+		</form> 
+    
+		</div>
+</div>
+<!-- end template -->
+
+	<!-- script references -->
+		
+
+	</body>
+</html>

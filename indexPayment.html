@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>That's My Spot!</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/new3.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/redmond/jquery-ui.css">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<!-- begin template -->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header"><a class="navbar-brand" href="./index.html">That's My Spot!</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li><a href="./about_us.html">About Us</a></li>
+        <li><a href="./myAccount.html">Manage Bookings</a></li>
+        <li></li>
+      </ul>
+      <form class="navbar-form">
+        <div class="form-group" style="display:inline;">
+          <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Search Parking at a location enter zipcode or landmark or street">
+            <span class="input-group-addon"><a href="./index.html"><img src="s.png"></img></a></span>
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+</div>
+
+
+<div id="map-canvas"></div>
+<div class="container-fluid" id="main">
+  <div class="row">
+  	<div class="col-xs-8" id="left">
+    
+		
+<!-- saved from url=(0057)file:///C:/Users/Sailee29/Desktop/Payment/new%20%202.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body background="parking.jpg"><div id="col_right">
+<!-- Ticket Summary-->
+
+	<div class= confirmation>
+	<h3> <center> <b>Ticket Summary
+	<input type="image" id="printbutton" src="./printbutton.png" value="Print Summary"></a>
+	</b></center> </h3>
+	<br>
+		<div class="row cc">
+			<div class="cell_left">
+				<label>City:<span class="asterisk"></span></label></div>
+			<div class="cell_left">		
+				<label>San Jose<span class="asterisk"></span></label>
+			</div>	
+				 <span style="white-space:nowrap"></span>				
+			<div id="error_cc_number" class="errormessage">
+			</div>
+		</div>	
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Garage:<span class="asterisk"></span></label></div>
+			<div class="cell_left">		
+				<label>10th Street Garage <span class="asterisk"></span></label>
+			</div>	
+				 <span style="white-space:nowrap"></span>
+			 <div id="error_cc_number" class="errormessage"></div>
+		</div>
+		
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Level:<span class="asterisk"></span></label>
+			</div>
+			<div class="cell_left">		
+				<label>1A <span class="asterisk"></span></label></div>	
+			 <span style="white-space:nowrap"></span>				
+			 <div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Ticket Number:<span class="asterisk"></span></label></div>
+			<div class="cell_left">		
+						<label>123A <span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		
+<div class="row cc">
+			<div class="cell_left">
+				<label>Zip Code:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label>95110 <span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Car Make:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label>Sedan <span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Start Time:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label> 10:00<span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>
+			<div class="row cc">
+			<div class="cell_left">
+				<label>End Time:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label>18:00 <span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Quantity:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label>1<span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Total:<span class="asterisk"></span></label></div>
+	<div class="cell_left">		
+						<label>$5<span class="asterisk"></span></label></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>
+		
+		<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; + (Internet Handling fees : $0.50)</p>
+<div class="row cc">
+			<div class="cell_left">
+				<h4><label>Grand Total:<span class="asterisk"></span></label></h4></div>
+	<div class="cell_left">		
+						<h4><label>$5.50<span class="asterisk"></span></label><h4></div>	
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>
+           
+		
+		</div>
+	
+	</div>
+    <div class="note">
+	<h4>&nbsp;&nbsp;Note: </h4>
+	<p>
+	&nbsp;&nbsp;&nbsp;
+	1. Please adhere to all published ticket limits.
+	<br> &nbsp;&nbsp;&nbsp;
+	2. We charge a non-refundable $0.50 fee for each ticket purchased
+	</div>
+	
+	<div class="exp">
+	<h4> </h4>
+	
+	<h4><center>3:50 mins before session expires!</center></h4>
+	</div>
+	
+		<!-- payment method -->
+		<div class= "payment">
+		<center><div class="row">
+			<div class="cell_double">
+				<h3><b>Payment Method</b></h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell_double">
+				
+				<img src="./mastercard.png" height="45" width="300" alt="MasterCard" title="MasterCard" class="cc MasterCard">
+				</div>
+		</div>
+<br>
+					<!-- payment type -->
+			<div class="row paywith">
+				<div class="cell_left">
+					<label>Pay with</label>
+		</div>
+				 <div class="cell_left">
+					<input type="radio" name="payment_method" id="payment_method_cc" value="Credit Card" class="radio_paywith" checked="checked">
+					<label for="payment_method_cc" class="radio_paywith">Credit</label> &nbsp;&nbsp;
+					<input type="radio" name="payment_method" id="payment_method_ck" value="Check" class="radio_paywith">
+					<label for="payment_method_ck" class="radio_paywith" >Debit</label>
+				</div>
+			<!-- Spacer -->
+			<div class="row paywith">
+			</div>
+			</div>
+				<!-- Card number -->
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Card Number<span class="asterisk">*</span></label></div>
+	<div class="cell_left">		
+							<input type="text" name="cc_number" id="cc_number" value="" maxlength="50" class="digits_spaces_hyphens">
+				 <span style="white-space:nowrap"></span>				<div id="error_cc_number" class="errormessage"></div>
+		</div>	
+		</div>
+		<!-- Expiration -->
+		<div class="row cc">
+			<div class="cell_left">
+				<label>Expires<span class="asterisk">*</span></label>
+		
+</div>
+<div class="cell_left">				
+				<select name="cc_exp_month" id="cc_exp_month">
+				<option value="" selected="selected"></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6" selected="selected">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>				</select>
+				<span> - </span>
+				<select name="cc_exp_year" id="cc_exp_year">
+				<option value="" selected="selected"></option><option value="2014">2014</option><option value="2015" selected="selected">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option>				</select>
+			
+		</div>
+		</div>
+		<!-- cc_cvv -->
+		<div class="row cc cc_cvv">
+			<div class="cell_left">
+				<label>Security Code<span class="asterisk">*</span></label>
+			
+</div>
+<div class="cell_left">		
+				<input type="text" name="cc_cvv" id="cc_cvv" value="" class="digits" maxlength="4" style="width:35px;">
+				<a id="security-code" href="file:///C:/Users/Sailee29/Desktop/Payment/new%20%202.html#"></a>
+				<div id="security-code-window" class="reveal-modal">
+					
+				</div>
+				</div>
+		</div>
+		</div>
+		
+
+	<div class = "billing">	
+	<center>
+		<div class="row bill">
+			<div class="cell_double">
+				<h3><b>Billing Address</b></h3>
+			</div>
+		</div>
+		<!-- Billing Location -->
+		<div class="row bill">
+			<div class="cell_left">
+			<align=left>
+				<label>Location<span class="asterisk">*</span></label>
+		</div>
+				<div class="cell_left"><select name="bill_country" id="bill_country"><option value="CA">Canada</option><option selected="selected" value="MX">Mexico</option><option selected="selected" value="US">United States of America</option></select>
+			</div>
+			
+		</div>
+		<!-- Billing company 
+		<div class="row bill">
+			<div class="cell_left">
+				<label>Company</label></div>
+			<!--	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		
+				<div class="cell_left"><input type="text" name="bill_company" id="bill_company" value="" maxlength="256">
+			</div>
+		</div>
+		
+		<!-- Billing name -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>Name<span class="asterisk">*</span></label>
+				</div><div class="cell_left"><input type="text" name="bill_name" id="bill_name" value="" maxlength="40"></div>
+				<div id="error_bill_name" class="errormessage"></div>
+			</div>
+		
+		<!-- Billing Street address -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>Street Address<span class="asterisk">*</span></label>
+				</div>
+				<div class="cell_left"><input type="text" name="bill_address_1" id="bill_address_1" value="" maxlength="40"><br>
+				<!--<input type="text" name="bill_address_2" id="bill_address_2" value="" maxlength="40">
+			--></div>
+		</div>
+		<!-- Billing City/Town -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>City/Town<span class="asterisk">*</span></label>
+			</div>
+			<div class="cell_left">
+				<input type="text" name="bill_city" id="bill_city" value="" maxlength="20">
+			</div>
+		</div>
+		<!-- Billing State -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>State/Province<span class="asterisk">*</span></label>
+		</div>
+			<div class="cell_left">
+				<select name="bill_state_US" id="bill_state_US" class="US"><option value="" selected="selected">Select one...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option><option value="PR">Puerto Rico</option><option value="VI">Virgin Islands</option><option value="MP">Northern Mariana Islands</option><option value="MH">Marshall Islands</option><option value="GU">Guam</option><option value="AS">American Samoa</option><option value="PW">Palau</option><option value="FM">Micronesia</option><option value="AA">AA</option><option value="AE">AE</option><option value="AP">AP</option></select>
+				<!--<select name="bill_state_CA" id="bill_state_CA" class="CA display_none" ><option value="" selected="selected">Select one...</option><option value="AB">Alberta</option><option value="BC">British Columbia</option><option value="MB">Manitoba</option><option value="NB">New Brunswick</option><option value="NL">Newfoundland/Labrador</option><option value="NS">Nova Scotia</option><option value="NT">Northwest Territories</option><option value="NU">Nunavut</option><option value="ON">Ontario</option><option value="PE">Prince Edward Island</option><option value="QC">Quebec</option><option value="SK">Saskatchewan</option><option value="YT">Yukon</option></select>
+				<select name="bill_state_MX" id="bill_state_MX" class="MX display_none"><option value="" selected="selected">Select one...</option><option value="AGS">Aguascalientes</option><option value="BCN">Baja California Norte</option><option value="BCS">Baja California Sur</option><option value="CAM">Campeche</option><option value="CHIS">Chiapas</option><option value="CHIH">Chihuahua</option><option value="COAH">Coahuila</option><option value="COL">Colima</option><option value="DF">Distrito Federal</option><option value="DGO">Durango</option><option value="GTO">Guanajuato</option><option value="GRO">Guerrero</option><option value="HGO">Hidalgo</option><option value="JAL">Jalisco</option><option value="EDM">MÈxico - Estado de</option><option value="MICH">Michoac·n</option><option value="MOR">Morelos</option><option value="NAY">Nayarit</option><option value="NL">Nuevo LeÛn</option><option value="OAX">Oaxaca</option><option value="PUE">Puebla</option><option value="QRO">QuerÈtaro</option><option value="QROO">Quintana Roo</option><option value="SLP">San Luis PotosÌ</option><option value="SIN">Sinaloa</option><option value="SON">Sonora</option><option value="TAB">Tabasco</option><option value="TAMPS">Tamaulipas</option><option value="TLAX">Tlaxcala</option><option value="VER">Veracruz</option><option value="YUC">Yucat·n</option><option value="ZAC">Zacatecas</option></select>
+				--></div>
+		</div>
+		<!-- Billing ZIP/Postal Code -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>ZIP/Postal Code<span class="asterisk">*</span></label>
+			</div>
+			<div class="cell_left">
+			
+				<input type="text" name="bill_zip" id="bill_zip" value="" class="zip" maxlength="12">
+			</div>
+		</div>
+		<!-- Billing Phone number -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>Phone<span class="asterisk">*</span></label>
+			</div>
+			<div class="cell_left">
+				<input type="text" name="bill_phone" id="bill_phone" value="" class="phone" maxlength="15">
+				<div id="error_bill_phone" class="errormessage"></div>
+			</div>
+		</div>
+		<!-- Billing Email address -->
+		<div class="row bill">
+			<div class="cell_left">
+				<label>Email<span class="asterisk">*</span></label>
+				</div>
+				<div class="cell_left">
+				<input type="text" name="bill_email" id="bill_email" value="" maxlength="40" class="email">
+				<div id="error_bill_email" class="errormessage"></div>
+			</div>
+		</div>
+		<!-- Spacer -->
+		<div class="row ship">
+			<div class="cell_left">
+				
+			</div>
+			<div class="cell_right">
+			</div>
+		</div>
+
+		<!-- Shipping Address -->
+		
+		<!-- Contact Address -->
+		
+		<!-- Spacer -->
+		<div>
+			<div class="cell_left"></div>
+			<div class="cell_right"></div>
+		</div>
+	</center>	
+</div>
+	
+	
+	<!-- Submit Button -->
+			<!-- Submit Button -->
+			<div class="submit">
+				
+				<input type="image" id="cancelbutton" src="./cancelbutton.png" value="Cancel Transaction Now"></a>
+				<a href="./thank_you.html"><input type="image" id="process_transaction_button" src="./paypage-process-transaction-button-secure.png" value="Process Transaction Now"></a>
+				
+			</div>
+			<div class="required">
+				<label>Required<span class="asterisk">*</span></label> </br>
+				
+				
+			</div>
+			
+		</div>
+		</div>
+
+		
+		
+	
+
+		</div></div>
+		</body></html>
+		
+      <!-- /item list -->
+      
+      <!--<p>
+      <a href="http://www.bootply.com/render/129229">Demo</a> | <a href="http://bootply.com/129229">Source Code</a>
+      </p>
+      
+      <hr> 
+        
+      <p>
+      <a href="http://bootply.com" target="_ext" class="center-block btn btn-primary">More Bootstrap Snippets on Bootply</a>
+      </p>
+        
+      <hr>      
+
+    </div>
+    <div class="col-xs-4"><!--map-canvas will be postioned here--></div>
+  
+  </div>
+</div>
+<!-- end template -->
+
+	<!-- script references -->
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+		<script src="js/scripts.js"></script>
+	--></body>
+</html>

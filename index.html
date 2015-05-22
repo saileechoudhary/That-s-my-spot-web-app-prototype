@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>That's My Spot!!</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+				
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed"></script>
+		<script src="js/scripts.js"></script>
+
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/redmond/jquery-ui.css">
+		
+		<script>
+			$(function() {
+				$( "#datepicker" ).datepicker({
+					showOn: "button",
+					buttonImage: "datepicker.gif",
+					buttonImageOnly: true,
+					buttonText: "Select date"
+				});
+			});
+			
+		 $(function() {
+				var dialog, form, parkingSpotDialog;
+ 
+   
+				function continueToReserve() {
+					var valid = true;					
+					dialog.dialog( "close" );
+					parkingSpotDialog.dialog( "open" );
+					return valid;
+				}
+				
+				function confirmSelection() {
+					var valid = true;					
+					parkingSpotDialog.dialog( "close" );
+					window.location.href="indexPayment.html";
+					return valid;
+				}
+ 
+				dialog = $( "#dialog-form" ).dialog({
+				autoOpen: false,
+				height: 300,
+				width: 350,
+				modal: true,
+				buttons: {
+					"Continue": continueToReserve,
+					Cancel: function() {
+						dialog.dialog( "close" );
+					}
+				},
+				close: function() {
+				form[ 0 ].reset();				
+				}
+			});
+			form = dialog.find( "form" ).on( "submit", function( event ) {
+			event.preventDefault();
+			continueToReserve();
+			});
+ 
+			$( '.parkDetails' ).click( function() {
+				dialog.dialog( "open" );
+				});
+				
+			parkingSpotDialog =  $( "#parkingSpot-form" ).dialog({
+				autoOpen: false,
+				height: 400,
+				width: 450,
+				modal: true,
+				buttons: {
+					"Book Now": confirmSelection,
+					Cancel: function() {
+						parkingSpotDialog.dialog( "close" );
+					}
+				},
+				close: function() {
+				form[ 0 ].reset();				
+				}
+			});
+ 
+			form = parkingSpotDialog.find( "form" ).on( "submit", function( event ) {
+			event.preventDefault();
+			confirmSelection();
+			});
+			});
+			
+			$(function() {
+			select1 = document.getElementById( 'hours' );
+			select2 = document.getElementById( 'mins' );
+			select3 = document.getElementById( 'hours1' );
+			select4 = document.getElementById( 'mins1' );
+			for (i = 0; i < 24; i++) {
+				var hr = '' ;
+				if ( i < 10){
+					hr = '0';
+				} 
+				hr = hr + i;				
+				
+				select1.add( new Option( hr ) );
+				select3.add( new Option( hr ) );
+			};
+			for (i = 0; i < 59; i++) {
+				var hr = '' ;
+				if ( i < 10){
+					hr = '0';
+				} 
+				hr = hr + i;
+				select2.add( new Option( hr ) );
+				select4.add( new Option( hr ) );
+			}
+			});
+			$(".checkbox").click(function(){
+				$(this).toggleClass('checked')
+			});
+			$(".checked").click(function(){
+				$(this).toggleClass('checkbox')
+			});
+		</script>
+	
+
+	</head>
+	<body>
+	<div id="parkingSpot-form" title="Reserve your spot">
+   <form>
+    <fieldset>
+	<label></label>
+      <label for="dateTime" class="PR17">Date</label><input type="text" name="date" id="datepicker"><br/>
+	 <label class="PR10">From:</label>  <select id="hours"></select> : <select id="mins"></select><br/>
+	 <label class="PR30" >To: </label>  <select id="hours1"></select> : <select id="mins1"></select>
+	  <br/>
+	  
+		<div class="div-table">
+		
+			<div class="div-table-row">
+				<div class="div-table-col">
+					<label>&nbsp;</label>
+				 </div>
+                <div class="div-table-col">
+					<label>A</label></div>
+                <div class="div-table-col"><label>B</label></div>
+                <div class="div-table-col">
+					<label>C</label></div>
+				<div class="div-table-col">
+					<label>D</label></div>
+				<div class="div-table-col">
+					<label>E</label></div>
+				<div class="div-table-col">
+					<label>F</label></div>
+				<div class="div-table-col">
+					<label >G</label></div>
+				<div class="div-table-col">
+					<label >H</label></div>
+				<div class="div-table-col">
+					<label >I</label></div>
+				<div class="div-table-col">
+					<label>J</label></div>
+           </div>
+			<div class="div-table-row">
+				 <div class="div-table-col">
+					<label>L1</label>
+				 </div>
+                <div class="div-table-col">
+					<input type="checkbox" name="checkboxG1" id="checkboxG1" class="css-checkbox" />
+					<label for="checkboxG1" class="css-label"></label>
+				</div>
+                <div  class="div-table-col">
+					<input type="checkbox" name="checkboxG2" id="checkboxG2" class="css-checkbox" checked="checked"/>
+					<label for="checkboxG2" class="css-label"></label>
+				</div>
+                <div  class="div-table-col">
+					<input type="checkbox" name="checkboxG3" id="checkboxG3" class="css-checkbox" />
+					<label for="checkboxG3" class="css-label"></label>					
+				</div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG34" id="checkboxG34" class="css-checkbox" />
+					<label for="checkboxG34" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG35" id="checkboxG35" class="css-checkbox" />
+					<label for="checkboxG35" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG36" id="checkboxG36" class="css-checkbox" />
+					<label for="checkboxG36" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG37" id="checkboxG37" class="css-checkbox" />
+					<label for="checkboxG37" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG38" id="checkboxG38" class="css-checkbox" />
+					<label for="checkboxG38" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG39" id="checkboxG39" class="css-checkbox" />
+					<label for="checkboxG39" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG40" id="checkboxG40" class="css-checkbox" />
+					<label for="checkboxG40" class="css-label"></label></div>
+             </div>
+            <div class="div-table-row">
+				<div class="div-table-col">
+					<label>L2</label>
+				 </div>
+                  <div class="div-table-col"><input type="checkbox" name="checkboxG4" id="checkboxG4" class="css-checkbox" />
+						<label for="checkboxG4" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG5" id="checkboxG5" class="css-checkbox" />
+					<label for="checkboxG5" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG6" id="checkboxG6" class="css-checkbox" />
+					<label for="checkboxG6" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG27" id="checkboxG27" class="css-checkbox" />
+					<label for="checkboxG27" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG28" id="checkboxG28" class="css-checkbox" />
+					<label for="checkboxG28" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG29" id="checkboxG29" class="css-checkbox" />
+					<label for="checkboxG29" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG30" id="checkboxG30" class="css-checkbox" />
+					<label for="checkboxG30" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG31" id="checkboxG31" class="css-checkbox" />
+					<label for="checkboxG31" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG32" id="checkboxG32" class="css-checkbox" />
+					<label for="checkboxG32" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG33" id="checkboxG33" class="css-checkbox" />
+					<label for="checkboxG33" class="css-label"></label></div>
+            </div>
+            <div class="div-table-row">
+				<div class="div-table-col">
+					<label>L3</label>
+				 </div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG7" id="checkboxG7" class="css-checkbox" />
+					<label for="checkboxG7" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG8" id="checkboxG8" class="css-checkbox" />
+					<label for="checkboxG8" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG9" id="checkboxG9" class="css-checkbox" />
+					<label for="checkboxG9" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG20" id="checkboxG20" class="css-checkbox" />
+					<label for="checkboxG20" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG21" id="checkboxG21" class="css-checkbox" />
+					<label for="checkboxG21" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG22" id="checkboxG22" class="css-checkbox" />
+					<label for="checkboxG22" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG23" id="checkboxG23" class="css-checkbox" />
+					<label for="checkboxG23" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG24" id="checkboxG24" class="css-checkbox" />
+					<label for="checkboxG24" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG25" id="checkboxG25" class="css-checkbox" />
+					<label for="checkboxG25" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG26" id="checkboxG26" class="css-checkbox" />
+					<label for="checkboxG26" class="css-label"></label></div>	
+           </div>
+            <div class="div-table-row">
+				<div class="div-table-col">
+					<label>L4</label>
+				 </div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG10" id="checkboxG10" class="css-checkbox" />
+					<label for="checkboxG10" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG11" id="checkboxG11" class="css-checkbox" />
+					<label for="checkboxG11" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG12" id="checkboxG12" class="css-checkbox" />
+					<label for="checkboxG12" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG13" id="checkboxG13" class="css-checkbox" />
+					<label for="checkboxG13" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG14" id="checkboxG14" class="css-checkbox" />
+					<label for="checkboxG14" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG15" id="checkboxG15" class="css-checkbox" />
+					<label for="checkboxG15" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG16" id="checkboxG16" class="css-checkbox" />
+					<label for="checkboxG16" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG17" id="checkboxG17" class="css-checkbox" />
+					<label for="checkboxG17" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG18" id="checkboxG18" class="css-checkbox" />
+					<label for="checkboxG18" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG19" id="checkboxG19" class="css-checkbox" />
+					<label for="checkboxG19" class="css-label"></label></div>
+           </div>
+		   <div class="div-table-row">
+				<div class="div-table-col">
+					<label>L5</label>
+				 </div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG41" id="checkboxG41" class="css-checkbox" />
+					<label for="checkboxG41" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG42" id="checkboxG42" class="css-checkbox" />
+					<label for="checkboxG42" class="css-label"></label></div>
+                <div class="div-table-col"><input type="checkbox" name="checkboxG43" id="checkboxG43" class="css-checkbox" />
+					<label for="checkboxG43" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG44" id="checkboxG44" class="css-checkbox" />
+					<label for="checkboxG44" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG45" id="checkboxG45" class="css-checkbox" />
+					<label for="checkboxG45" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG46" id="checkboxG46" class="css-checkbox" />
+					<label for="checkboxG46" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG47" id="checkboxG47" class="css-checkbox" />
+					<label for="checkboxG47" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG48" id="checkboxG48" class="css-checkbox" />
+					<label for="checkboxG48" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG49" id="checkboxG49" class="css-checkbox" />
+					<label for="checkboxG49" class="css-label"></label></div>
+				<div class="div-table-col"><input type="checkbox" name="checkboxG50" id="checkboxG50" class="css-checkbox" />
+					<label for="checkboxG50" class="css-label"></label></div>
+           </div>
+		   
+		</div>
+		
+		
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+	<div id="dialog-form" title="Parking details">
+   <form>
+    <fieldset>
+      <label for="carType">Make of your Car</label>
+	  <select name="carType" id="carType">
+		<option value="Sedan">Sedan</option>
+		<option value="sports">Sports</option>
+		<option value="SUV">SUV</option>
+		<option value="StationWagon">Station Wagon</option>
+		<option value="MiniVan">Mini Van</option>
+	  </select><br/>
+      <label for="valetParking" class="PR30">Valet Parking</label>
+	  <input type="checkbox" name="valetParking" id="valetParking" value="Yes"><br/>
+      <label for="disabledParking" class="PR66">Disabled Parking</label>
+	  <input type="checkbox" name="disabledParking" id="disabledParking" value="Yes">
+      
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </fieldset>
+  </form>
+</div>
+
+<!-- begin template -->
+<div class="navbar navbar-custom navbar-fixed-top">
+ <div class="navbar-header"><a class="navbar-brand" href="./index.html">That's My Spot!</a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li class="active"><a href="./about_us.html">About Us</a></li>
+
+        <li><a href="./myAccount.html">Manage Bookings</a></li>
+        <li>&nbsp;</li>
+      </ul>
+      <form class="navbar-form">
+        <div class="form-group" style="width=60%;">
+          <div class="input-group" style="width: 53%; float:left">            
+            <input type="text" class="form-control" placeholder="Search Parking at a location enter zipcode or landmark or street">
+            <span class="input-group-addon"><a href="./index.html"><img src="s.png"></img></a></span>
+          </div>
+		  <div style="width: 12%; float:right">
+				<img src="johnny_bravo1.jpg" width="26px" height="26px"></img>
+				<a href="#">Hi! Johnny Bravo</a>
+		  </div>
+        </div>
+      </form>
+
+    </div>
+</div>
+
+<div id="map-canvas"></div>
+<div class="container-fluid" id="main">
+  <div class="row">
+  	<div class="col-xs-6" id="left">
+    
+      <h2>Parking at San Jose State University</h2>
+      <!-- item list -->
+      <div class="panel panel-default" style="height:140px">
+        <div class="panel-heading"><font size="4"><b>7th street garage</b><a href="#"  class="parkDetails"><img src="./book1.gif" width="95" height="38" align="right"></a></font></div>
+	<a target="" href="">
+		<img src="park1.jpg" alt="Park1" width="115" height="90" align="left" style="PADDING-RIGHT: 5px">
+	</a>
+	<p> Open : 24 hours <br>Price : 2$ an hour <br>
+	    Availability : 320/400 cars <br>
+            Disabled : 30 spots</p>
+      </div>
+      
+      <div class="panel panel-default" style="height:140px">
+        <div class="panel-heading"><font size="4"><b>Second and San Carlos Street Garage</b><a href="#"  class="parkDetails"><img src="./book1.gif" width="95" height="38" align="right"></a></font></div>
+	<a target="" href="">
+		<img src="park2.jpg" alt="Park2" width="115" height="90" align="left" style="PADDING-RIGHT: 5px">
+	</a>
+
+      <p>Open : 7am - 10pm<br>Price : 2.5$ an hour <br>
+	    Availability : 80/100 cars <br>
+            Disabled : 8 spots</p>
+      </div>
+      
+      
+      <div class="panel panel-default" style="height:140px">
+        <div class="panel-heading"><font size="4"><b>4th Street Garage</b><a href="#"  class="parkDetails"><img src="./book1.gif" width="95" height="38" align="right"></a></font></div>
+	<a target="" href="">
+		<img src="park3.jpg" alt="Park3" width="115" height="90" align="left" style="PADDING-RIGHT: 5px">
+	</a>
+
+      <p>Open : 24 hours<br>Price :3$ per hour<br>
+	    Availability : 120/200 cars<br>
+            Disabled : 10 spots</p>
+      </div>
+      
+      
+      <div class="panel panel-default" style="height:140px">
+        <div class="panel-heading"><font size="4"><b>Victory Parking</b><a href="#"  class="parkDetails"><img src="./book1.gif" width="95" height="38" align="right"></a<</font></div>
+	<a target="" href="">
+		<img src="park4.jpg" alt="Park4" width="115" height="90" align="left" style="PADDING-RIGHT: 5px">
+	</a>
+
+         <p>Open: Weekdays 7am-10pm <br>Price : 5$ per hour<br>
+	    Availability : 300 cars<br>
+	    Disabled : 20 spots<br>
+		</p>
+      </div>
+      
+      <hr>
+      <!-- /item list -->
+      
+
+    </div>
+    <div class="col-xs-4"> </div>
+</div>
+    
+  </div>
+</div>
+<!-- end template -->
+
+	<!-- script references -->
+	
+	</body>
+</html>

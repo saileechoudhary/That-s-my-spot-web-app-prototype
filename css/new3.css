@@ -1,0 +1,137 @@
+<style>
+body {
+    background-image: url("./new  2_files/parking.jpg");
+}
+
+.label { display: inline-block; width: 140px; text-align: right; }
+?
+.header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:2px; 
+}
+
+.confirmation {
+ /* background-color:#fefefe;
+    height:300px;
+    width:400px;
+    float:center;
+*/
+    position : absolute;
+    top: 2%;
+    left: 35%;
+    width:500px;
+    height:400px;
+    /*margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    */
+border: 1px solid #ccc;
+    background-color: #c5dbec;
+   
+}
+
+.note {
+ /* background-color:#fefefe;
+    height:300px;
+    width:400px;
+    float:center;
+*/
+    position : absolute;
+    top: 70.5%;
+    left: 35%;
+    width:500px;
+    height:95px;
+    /*margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    */
+border: 1px solid #ccc;
+    background-color: #c5dbec;
+   
+}
+
+.exp {
+ /* background-color:#fefefe;
+    height:300px;
+    width:400px;
+    float:center;
+*/
+    position : absolute;
+    text-align : center;
+    top: 88.5%;
+    left: 35%;
+    width:500px;
+    height:45px;
+    /*margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+    */
+border: 1px solid #ccc;
+   
+    border-style: groove;
+    border-color: #c5dbec;
+}
+.payment {
+position : absolute;
+    top : 2%;
+    left : 77%;
+    background-color:#c5dbec;
+    height:240px;
+    width:500px;
+    float:right;
+    padding:5px; 
+}
+
+.cell_left {
+    text-align: left;
+      padding-left: 50px;  
+}
+
+.row-bill{
+  display:table-row;
+  width:auto;
+  clear:both;
+}
+.cell_left{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:200px;         
+  background-color:##c5dbec;  
+}
+
+.billing {
+    position : absolute;
+    top: 44%;
+    left: 77%;
+    width:500px;
+    height:271px;
+    border: 1px solid #ccc;
+    background-color: #c5dbec;
+   
+}
+
+
+.required {
+    position : absolute;
+	top	: 89.5%;
+	left : 78%;
+    float:left;
+    padding:0px; 
+}
+
+.submit {
+  
+        appearance: button;
+        -moz-appearance: button;
+    /*    -webkit-appearance: button;*/
+        text-decoration: none; 
+        font: menu; 
+        color: ButtonText;
+        display: inline-block; 
+        padding: 0px 0px;
+    	position : absolute;
+		top : 92.2%;
+		left : 83%;
+		width: 500px;
+		text-align: left;
+     
+}
